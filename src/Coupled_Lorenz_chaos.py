@@ -118,9 +118,7 @@ def main():
     sys1 = Coupled_Lorenz_Sys(N = 20 )
     XYZs, Ts = sys1.solve(0.01, 5000)
     
-
     plt.plot(XYZs[0, 0,:], XYZs[1, 0,:])
-
     fig = plt.figure()
     Ax = fig.add_subplot(111, projection='3d')
     Ax.scatter(XYZs[0, 0,:], XYZs[0, 1,:], XYZs[0, 2,:], s=5,   c=Ts, cmap="winter")
@@ -128,9 +126,7 @@ def main():
     Ax.set_xlabel('x')
     Ax.set_ylabel('y')
     Ax.set_zlabel('z')
-    Ax.axis('equal')
-
-
+    #Ax.axis('equal')
     # 表示
     plt.show()
 
